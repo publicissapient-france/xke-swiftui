@@ -15,7 +15,8 @@ struct TalkRow: View {
         VStack(spacing: 4) {
             header()
 
-            Headline(talk.title)
+            Text(talk.title)
+                .headline()
                 .multilineTextAlignment(.center)
         }
         .padding(8)

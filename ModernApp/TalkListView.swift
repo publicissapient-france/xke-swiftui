@@ -12,15 +12,22 @@ struct TalkListView: View {
     let talks: [Talk]
 
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(talks, id: \.id) {
-                    TalkRow(talk: $0)
-                        .padding(.horizontal)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(talks, id: \.id) { row in
+                        NavigationLink(destination: TalkDetail(talk: row)) {
+                            TalkRow(talk: row)
+                        }
+                    }
                 }
             }
+            .background(
+                Image("background")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+            )
         }
-        .background(Image("background"))
     }
 }
 

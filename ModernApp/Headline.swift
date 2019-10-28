@@ -24,3 +24,12 @@ struct Headline: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+
+extension Text {
+    func headline() -> Self {
+        self
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .foregroundColor(Color("tint"))
+    }
+}
