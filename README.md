@@ -5,6 +5,8 @@ Le but de l'exercice est d'apprendre à créer une nouvelle `View` sur `Xcode`
 
 ## 1. Créer un nouvelle `View` appelée `TalkRow` in `Xcode`
 
+<img src="ImagesREADME/choose-swiftUIView.png" width="640"/>
+
 ## 2. Passer un `Talk` au `TalkRow`
 
 ## 3. Faire compiler la  preview
@@ -40,4 +42,3 @@ Le but de l'exercice est d'apprendre à créer une nouvelle `View` sur `Xcode`
 
 ## 15. Utiliser State pour garder les étoiles d’un talk  ( A FAIRE  !!!?? )
 ## 16. Utiliser EnvirommentObject pour garder  les étoiles d’un talk
-
