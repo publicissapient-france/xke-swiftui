@@ -11,7 +11,14 @@ Dans ce hands-on vous allez découvrir et prendre en main l'outil pour découvri
 
 1. Créez un nouvelle `View` appelée `TalkRow` dans `Xcode`
 
+Choisissez sur le menu en haut `File > New > File...` et `SwiftUI View` comme dans l'image pour créer le fichier.
+
 <img src="ImagesREADME/choose-swiftUIView.png" width="640"/>
+&nbsp;
+
+Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "primitif" de SwiftUI : tous les éléments visuels sont de type `View`. La mise en forme d'une `View` se définit dans sa propriété `body` à base... de `View` !.
+
+  > On n'expliquera pas la notion de `some` dans hands-on. Pour les plus curieux, sachez juste qu'il s'agit d'un *Opaque type* et qu'un article paraîtra sur le blog à ce sujet ;)
 
 Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "primitif" de SwiftUI : tous les éléments visuels sont de type `View`. La mise en forme d'une `View` se définit dans sa propriété `body` à base... de `View` !.
 
@@ -21,7 +28,11 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 3. Mettez à jour la preview et vérifiez que votre titre s'affiche bien.
   > Le canvas n'est pas affiché ? Pas de panique ! Appuyez sur Alt+Cmd+Enter pour l'ouvrir/fermer (même si ma mère me dit surtout de la fermer).
 
-## 4. Remplir notre `TalkRow` avec un `Talk`
+4. Remplissez notre `TalkRow` avec le reste des informations du `Talk` pour qu'il resemble à l'image suivante:
+
+<img src="ImagesREADME/default.png" width="640"/>
+&nbsp;
+
 
 ## QUIZZ
 
@@ -32,9 +43,21 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 # Exercice 2 - Styling
   > Vous allez découvrir comment manipuler une `View`.
 
-## 5. Créer un autre composant pour la date - format inclus
+5. Créez un autre composant pour afficher les dates d'un slot , utilisez ce formatter:
+```swift
+static private var formatter = { () -> DateFormatter in
+    let formatter = DateFormatter()
+    formatter.setLocalizedDateFormatFromTemplate("HH:mm")
 
-## 6. Montrer les modifiers, quelques exemples et puis comment les retrouver.
+    return formatter
+}()
+```
+pour qu'il resemble à l'image suivante:
+<img src="ImagesREADME/default.png" width="640"/>
+&nbsp;
+
+6. Essayez ces differents modifiers:
+* background
 
 ## 7. Utiliser les modifiers
 
