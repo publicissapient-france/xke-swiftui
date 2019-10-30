@@ -28,10 +28,12 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 3. Mettez à jour la preview et vérifiez que votre titre s'affiche bien.
   > Le canvas n'est pas affiché ? Pas de panique ! Appuyez sur Alt+Cmd+Enter pour l'ouvrir/fermer (même si ma mère me dit surtout de la fermer).
 
-4. Remplissez notre `TalkRow` avec le reste des informations du `Talk` pour qu'il resemble à l'image suivante:
+4. Remplissez notre `TalkRow` avec le type et la salle du `Talk` pour qu'il resemble à l'image suivante:
 
-<img src="ImagesREADME/default.png" width="640"/>
+<img src="ImagesREADME/fillView1.png" width="640"/>
 &nbsp;
+
+> Vous remarquerez que la propriété `body` ne doit retourner qu'une view. Donc pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack et ZStack.
 
 
 ## QUIZZ
@@ -53,7 +55,7 @@ static private var formatter = { () -> DateFormatter in
 }()
 ```
 pour qu'il resemble à l'image suivante:
-<img src="ImagesREADME/default.png" width="640"/>
+<img src="ImagesREADME/fillView2.png" width="640"/>
 &nbsp;
 
 2. Essayez ces differents modifiers:
@@ -62,13 +64,13 @@ pour qu'il resemble à l'image suivante:
 * alignement
 * ...
 
-3. Utiliser les modifiers pour
+3. Utiliser des modifiers pour donner un style a votre `TalkRow`
 
 4. Affichez 2 previews du composant `TalkRow`, 1 avec un titre long et un autre avec un titre court
 
 Vous devriez afficher un resultat comme le suivant:
 
-<img src="ImagesREADME/default.png" width="640"/>
+<img src="ImagesREADME/multiPreview.png" width="640"/>
 &nbsp;
 
 # Exercice 3 - Faisons des listes !
@@ -91,12 +93,13 @@ Ca marche, mais nous devons écrire du contenu en dur dans chacune de nos `Views
 # Exercice 4 - Navigation
   > Le but de l'exercice est d'utiliser la navigation pour afficher une nouvelle vue.
 
-## 13. donner une DestinationView (avec les étoiles) pour utiliser NavigationView
+1. donner une DestinationView (avec les étoiles) pour utiliser NavigationView
 
-## 14. Tester la navigation avec la preview
+2. Tester la navigation avec la preview
 
 # Exercice 5 - Stateful
   > Le but de l'exercice est de découvrir comment gérer un état avec SwiftUI
 
-## 15. Utiliser State pour garder les étoiles d’un talk  ( A FAIRE  !!!?? )
-## 16. Utiliser EnvirommentObject pour garder  les étoiles d’un talk
+1. Utiliser State pour garder les étoiles d’un talk  ( A FAIRE  !!!?? )
+
+2. Utiliser EnvirommentObject pour garder  les étoiles d’un talk
