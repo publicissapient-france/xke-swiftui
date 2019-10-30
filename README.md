@@ -43,7 +43,7 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 # Exercice 2 - Styling
   > Vous allez découvrir comment manipuler une `View`.
 
-5. Créez un autre composant pour afficher les dates d'un slot , utilisez ce formatter:
+1. Créez un autre composant pour afficher les dates d'un slot en utilisant ce formatter:
 ```swift
 static private var formatter = { () -> DateFormatter in
     let formatter = DateFormatter()
@@ -56,29 +56,37 @@ pour qu'il resemble à l'image suivante:
 <img src="ImagesREADME/default.png" width="640"/>
 &nbsp;
 
-6. Essayez ces differents modifiers:
+2. Essayez ces differents modifiers:
 * background
+* font
+* alignement
+* ...
 
-## 7. Utiliser les modifiers
+3. Utiliser les modifiers pour
 
-## 8. 2 PREVIEW = 1 titre court et 1 titre long
+4. Affichez 2 previews du composant `TalkRow`, 1 avec un titre long et un autre avec un titre court
+
+Vous devriez afficher un resultat comme le suivant:
+
+<img src="ImagesREADME/default.png" width="640"/>
+&nbsp;
 
 # Exercice 3 - Faisons des listes !
   > Le but de l'exercice est d'apprendre à manipuler des listes avec SwiftUI.
 
 1. Créez une nouvelle `View` appelée `TalkRowList`
-1. Créez une liste, et ajoutez-y 2 `TalkRow` avec du contenu statique. Pensez à mettre à jour votre preview !
+2. Créez une liste, et ajoutez-y 2 `TalkRow` avec du contenu statique. Pensez à mettre à jour votre preview !
 
 Ca marche, mais nous devons écrire du contenu en dur dans chacune de nos `Views`, pas très pratique... Heureusement, Xcode fournit un dossier `Preview Content` dans lequel vous pouvez mettre du contenu à destination... des previews ! On va donc s'en servir pour définir nos contenus à destination de nos previews.
 
-1. Créez un fichier `TalkPreview` dans `Preview Content`. Définissez-y un enum `TalkPreview` dans lequel vous déclarerez deux contenus statiques :
+2. Créez un fichier `TalkPreview` dans `Preview Content`. Définissez-y un enum `TalkPreview` dans lequel vous déclarerez deux contenus statiques :
   - un `Talk` appelé `longTitle` avec le titre ""
   - un autre `rex` avec le titre "" et de type `.rex`
 2. Remplacez vos contenus statiques dans `TalkRow` et `TalkRowList` par ces nouvelles références.
 
-## 11. Passer les talks comme paramètres de TalkListView
+3. Passer les talks comme paramètres de TalkListView
 
-## 12. Mettre un background à la liste
+4. Mettre un background à la liste
 
 # Exercice 4 - Navigation
   > Le but de l'exercice est d'utiliser la navigation pour afficher une nouvelle vue.
