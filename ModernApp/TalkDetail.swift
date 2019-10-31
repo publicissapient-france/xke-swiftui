@@ -46,8 +46,26 @@ struct TalkDetail: View {
     }
 }
 
+/// Pass a (writable) binding to underlying content
+struct BindingData<T, Content: View>: View {
+    @State private var data: T
+    let content: (Binding<T>) -> Content
+
+    init(_ data: T, @ViewBuilder content: @escaping (Binding<T>) -> Content) {
+        self._data = State(initialValue: data)
+        self.content = content
+    }
+
+    var body: Content {
+        content($data)
+    }
+}
+
 struct TalkDetail_Previews: PreviewProvider {
+
     static var previews: some View {
-        TalkDetail(talk: .constant(TalkPreview.rexType))
+        BindingData(TalkPreview.rexType) {
+            TalkDetail(talk: $0)
+        }
     }
 }
