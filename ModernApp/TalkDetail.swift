@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct TalkDetail: View {
-    let talk: Talk
-    @State var notation: Int? = nil
+    @Binding var talk: Talk
 
     var body: some View {
         VStack {
@@ -29,8 +28,8 @@ struct TalkDetail: View {
 
             HStack {
                 ForEach (0..<5) { i in
-                    Button(action: { self.notation = i + 1 }) {
-                        return self.Notation(i, score: self.notation ?? 0)
+                    Button(action: { self.talk.rating = i + 1 }) {
+                        return self.Notation(i, score: self.talk.rating ?? 0)
                     }
                 }
             }
@@ -49,6 +48,6 @@ struct TalkDetail: View {
 
 struct TalkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TalkDetail(talk: TalkPreview.rexType)
+        TalkDetail(talk: .constant(TalkPreview.rexType))
     }
 }

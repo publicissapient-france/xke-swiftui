@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct TalkListView: View {
-    let talks: [Talk]
+    @State var talks: [Talk]
 
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(talks, id: \.id) { row in
-                        NavigationLink(destination: TalkDetail(talk: row)) {
-                            TalkRow(talk: row)
+                    ForEach(talks.indices) { i in
+                        NavigationLink(destination: TalkDetail(talk: self.$talks[i])) {
+                            TalkRow(talk: self.talks[i])
                         }
                     }
                 }

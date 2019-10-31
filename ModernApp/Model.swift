@@ -30,6 +30,7 @@ struct Talk {
     var endDate: Date {
         return startDate.addingTimeInterval(duration)
     }
+    var rating: Int? = 0
 }
 
 //struct Slot {
