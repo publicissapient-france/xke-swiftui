@@ -6,9 +6,10 @@ Il adopte une approche déclarative déjà vu chez d'autres comme ReactJS ou Vue
 Dans ce hands-on vous allez découvrir et prendre en main l'outil pour découvrir ce fonctionnement mais similitudes/différences avec les technlogies précédemment citées. Gardez en tête que, bien qu'en gestation depuis de nombreuses années (4 ans), l'outil n'est disponible que depuis quelques mois. Il est donc encore assez jeune :)
 
 ## Useful Shortcuts
-`Option-Command-P` - Resume Live Preview
-`Command + Shift + L` - Quick Insert
-`Command + click on Code` - Open SwiftUI actions
+* `Option-Cmd-Enter` - Toggle Live Preview
+* `Option-Command-P` - Resume Live Preview
+* `Command + Shift + L` - Quick Insert
+* `Command + click on Code` - Open SwiftUI actions
 
 ## Exercice 1 - SwiftUI le premier contact
 
@@ -25,8 +26,6 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 
 2. Passez un `Talk` en paramètre de `TalkRow` et remplacez le contenu de `Text` par le titre de `Talk`.
 3. Mettez à jour la preview et vérifiez que votre titre s'affiche bien.
-  > Le canvas n'est pas affiché ? Pas de panique ! Appuyez sur Alt+Cmd+Enter pour l'ouvrir/fermer (même si ma mère me dit surtout de la fermer).
-
 4. Remplissez notre `TalkRow` avec le type et la salle du `Talk` pour qu'il resemble à l'image suivante:
 
 <img src="ImagesREADME/fillViewNoStyle.png" width="640"/>
@@ -128,6 +127,9 @@ Testez depuis `TalkRowList`. Ca fonctionne, mais la notation n'est pas gardée e
 > C'est grâce à `Binding` que SwiftUI va, en interne, tracker et mettre à jour l'état de notre vue.
 
 Il nous faut modifier `talk` directment afin de gader sa notation à jour.
-4. Retirez l'attribut `rating`, et utilisez `talk.rating` à la place. le property wrapper `Binding` à `talk`.
-5. Il faut maintenant pouvoir mettre à jour les talks dans `TalkDetail`. On a déjà vu un property wrapper qui permettait de faire ça, il vous suffit de l'ajouter à `talks`.
-6. Il faut passer un `Binding<Talk>` à `TalkDetail`. Mettez à jour `ForEach` avec `ForEach(talks.indices)`, puis utilisez l'index pour récupérer un `Talk` (pour `TalkRow`) et un `Binding<Talk>` (pour `TalkDetail`).
+
+4. Retirez l'attribut `rating`, et utilisez `talk.rating` à la place. Ajoutez `@Binding` à `talk`.
+4. Il faut maintenant pouvoir mettre à jour les talks dans `TalkDetail`. On a déjà vu un property wrapper qui permettait de faire ça, il vous suffit de l'ajouter à `talks`.
+4. Il faut passer un `Binding<Talk>` à `TalkDetail`. Mettez à jour `ForEach` avec `ForEach(talks.indices)`, puis utilisez l'index pour récupérer :
+* un `Talk` (pour `TalkRow`)
+* un `Binding<Talk>` (pour `TalkDetail`)
