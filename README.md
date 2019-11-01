@@ -5,6 +5,9 @@ Il adopte une approche déclarative déjà vu chez d'autres comme ReactJS ou Vue
 
 Dans ce hands-on vous allez découvrir et prendre en main l'outil pour découvrir ce fonctionnement mais similitudes/différences avec les technlogies précédemment citées. Gardez en tête que, bien qu'en gestation depuis de nombreuses années (4 ans), l'outil n'est disponible que depuis quelques mois. Il est donc encore assez jeune :)
 
+## Useful Shortcuts
+`Option-Command-P` - Resume Live Preview
+
 ## Exercice 1 - SwiftUI le premier contact
 
   > Le but de l'exercice est d'apprendre à créer une nouvelle `View` sur `Xcode`.
@@ -24,10 +27,11 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 
 4. Remplissez notre `TalkRow` avec le type et la salle du `Talk` pour qu'il resemble à l'image suivante:
 
-<img src="ImagesREADME/fillView1.png" width="640"/>
+<img src="ImagesREADME/fillViewNoStyle.png" width="640"/>
+&nbsp;
 &nbsp;
 
-> Vous remarquerez que la propriété `body` ne doit retourner qu'une view. Donc pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack et ZStack.
+> Pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack et ZStack.
 
 
 ## QUIZZ
