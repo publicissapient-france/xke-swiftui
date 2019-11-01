@@ -7,6 +7,8 @@ Dans ce hands-on vous allez découvrir et prendre en main l'outil pour découvri
 
 ## Useful Shortcuts
 `Option-Command-P` - Resume Live Preview
+`Command + Shift + L` - Quick Insert
+`Command + click on Code` - Open SwiftUI actions
 
 ## Exercice 1 - SwiftUI le premier contact
 
