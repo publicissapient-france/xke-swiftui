@@ -135,3 +135,11 @@ Il nous faut modifier `talk` directment afin de gader sa notation à jour.
 4. Il faut passer un `Binding<Talk>` à `TalkDetail`. Mettez à jour `ForEach` avec `ForEach(talks.indices)`, puis utilisez l'index pour récupérer :
 * un `Talk` (pour `TalkRow`)
 * un `Binding<Talk>` (pour `TalkDetail`)
+
+# Where to Go From Here? { WIP }
+
+Nous avons appris les bases de SwiftUI mais il y a encore quelques conceptes qu'on a pas abordé est qui peuvent rendre notre code encore plus lisible.
+Ce le cas de `ViewModifier` qui nous permettre de extraire des comportements d'une `View` même avec un `State`.
+Voici un très bon article où ce concepte est très bien mis en avant : https://sarunw.com/posts/swiftui-viewmodifier/
+
+Et pour aller plus loin il faut forcement faire une visite au repos de MoviewSwiftUI [https://github.com/Dimillian/MovieSwiftUI]
