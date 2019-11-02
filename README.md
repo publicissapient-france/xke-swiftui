@@ -1,9 +1,9 @@
 # HandsOn SwiftUI
 SwiftUI, c'est le nouveau SDK pour développer des apps cross-plateform dans l'éco-système Apple.
 
-Il adopte une approche déclarative déjà vu chez d'autres comme ReactJS ou VueJS.
-
-Dans ce hands-on vous allez découvrir et prendre en main l'outil pour découvrir ce fonctionnement mais similitudes/différences avec les technlogies précédemment citées. Gardez en tête que, bien qu'en gestation depuis de nombreuses années (4 ans), l'outil n'est disponible que depuis quelques mois. Il est donc encore assez jeune :)
+Il repose sur deux notions que nous allons voir à travers ce TP :
+1. La programmation déclarative : pas de XML, JSX, storyboard... tout est code !
+2. La programmation réactive pour la gestion d'état et du "DOM".
 
 ## Useful Shortcuts
 * `Option-Cmd-Enter` - Toggle Live Preview
