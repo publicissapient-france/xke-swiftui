@@ -25,14 +25,14 @@ Choisissez sur le menu en haut `File > New > File...` et `SwiftUI View` comme da
 Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "primitif" de SwiftUI : tous les éléments visuels sont de type `View`. La mise en forme d'une `View` se définit dans sa propriété `body` à base... de `View` !.
 
 2. Passez un `Talk` en paramètre de `TalkRow` et remplacez le contenu de `Text` par le titre de `Talk`.
-3. Mettez à jour la preview et vérifiez que votre titre s'affiche bien.
+3. Mettez à jour sa preview et vérifiez que votre titre s'affiche bien.
 4. Remplissez notre `TalkRow` avec le type et la salle du `Talk` pour qu'il resemble à l'image suivante:
 
 <img src="ImagesREADME/fillViewNoStyle.png" width="640"/>
 &nbsp;
 &nbsp;
 
-> Pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack et ZStack.
+> Pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack.
 
 
 ## QUIZZ
@@ -60,38 +60,40 @@ static private var formatter = { () -> DateFormatter in
 ```
 
 # Exercice 3 - Modifiers
+  > Cet exercice a pour but de vous découvrir comment "transformer" une vue
 
-2. Essayez ces differents modifiers:
+SwiftUI vient avec plusieurs modifiers pré-définis :
 * background
 * font
-* alignement
+* alignment
 * ...
 
-3. Utiliser des modifiers pour donner un style a votre `TalkRow`
+1. Changez le titre pour qu'il ressemble à l'image ci-dessous (si vous cherchez la couleur, elle est définie dans "Assets.xcassets")
+3. Appliquez un padding, un background et une ombre sur pour donner un style à votre `TalkRow`.
 
-4. Affichez 2 previews du composant `TalkRow`, 1 avec un titre long et un autre avec un titre court
+4. Changez votre preview pour qu'elle s'affiche en 480x50. Profitez-en pour afficher 2 previews du composant `TalkRow` : 1 avec un titre long et un autre avec un titre court.
 
-Vous devriez afficher un resultat comme le suivant :
+5. *Bonus :* Créez une struct `CardModifier` qui implémente `ViewModifier`. Déplacez-y tous les effets appliqués à `TalkRow`, puis utilisez-le en appelant `.modifier()`.
+
+Vous devriez arriver au résultat suivant :
 
 <img src="ImagesREADME/multiPreview.png" width="640"/>
 &nbsp;
 
+
 # Exercice 4 - Faisons des listes !
-  > Le but de l'exercice est d'apprendre à manipuler des listes avec SwiftUI.
+  > Le but de l'exercice est d'être capable d'afficher une liste d'éléments avec SwiftUI.
 
 1. Créez une nouvelle `View` appelée `TalkRowList`
 2. Créez une liste, et ajoutez-y 2 `TalkRow` avec du contenu statique. Pensez à mettre à jour votre preview !
+3. Passez les talks en paramètre de TalkListView. Bouclez dessus pour afficher un `TalkRow` pour chaque.
+4. Ajoutez un background à la liste.
 
 Ca marche, mais nous devons écrire du contenu en dur dans chacune de nos `Views`, pas très pratique... Heureusement, Xcode fournit un dossier `Preview Content` dans lequel vous pouvez mettre du contenu à destination... des previews ! On va donc s'en servir pour définir nos contenus à destination de nos previews.
 
-3. Créez un fichier `TalkPreview` dans `Preview Content`. Définissez-y un enum `TalkPreview` dans lequel vous déclarerez deux contenus statiques :
-  - un `Talk` appelé `longTitle` avec le titre ""
-  - un autre `rex` avec le titre "" et de type `.rex`
-2. Remplacez vos contenus statiques dans `TalkRow` et `TalkRowList` par ces nouvelles références.
+5. Créez un fichier `TalkPreview` dans `Preview Content`. Définissez-y un `TalkPreview` avec votre talk long et court.
+2. Utilisez-les dans `TalkRow` et `TalkRowList`.
 
-3. Passez les talks comme paramètres de TalkListView
-
-4. Ajoutez un background à la liste
 
 # Exercice 5 - Navigation
   > Le but de l'exercice est d'utiliser la navigation pour afficher une nouvelle vue.
@@ -116,10 +118,10 @@ Maintenant que nous pouvons naviguer, nous allons ajouter la possibilité de not
 
 Pour pouvoir "modifier" `TalkDetail` et, surtout, tracker sa valeur au fil du temps, SwiftUI utilise la programmation réactive. Grâce aux *Property Wrappers* c'est assez simple à utiliser.
 
-2. Ajoutez `@state` devant rating. Magie, ça compile et vous pouvez tester la notation depuis le *Live Preview*.
+2. Ajoutez `@State` devant rating. Magie, ça compile et vous pouvez tester la notation depuis le *Live Preview*.
 Testez depuis `TalkRowList`. Ca fonctionne, mais la notation n'est pas gardée entre chaque aller-retour !
 
-> `@state` c'est quoi ? C'est un *Property Wrapper*, une struct qui va venir wrapper notre attribut et nous fournir des fonctionnalités/patterns. A la compilation, vous allez avoir 3 attributs auxquelles vous allez pouvoir accéder :
+> `@State` c'est quoi ? C'est un *Property Wrapper*, une struct qui va venir wrapper notre attribut et nous fournir des fonctionnalités/patterns. A la compilation, vous allez avoir 3 attributs auxquelles vous allez pouvoir accéder :
 - `_rating`, le wrapper en lui-même, le "storage". Ici `state<Int?>`
 - `rating`, la valeur. Juste des getter/setter qui vont aller piocher dans `_rating`.
 - `$rating`, une valeur "projetée" fournit par notre wrapper. Ici `Binding<Int?>`.
