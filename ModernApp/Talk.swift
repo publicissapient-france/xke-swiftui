@@ -8,12 +8,6 @@
 
 import Foundation
 
-struct Speaker {
-    let avatarURL: URL?
-    let firstname: String
-    let lastname: String
-}
-
 enum TalkType: String {
     case rex
     case talk
@@ -27,16 +21,8 @@ struct Talk {
     let startDate: Date
     let duration: TimeInterval
     let room: String
+    var rating: Int? = 0
     var endDate: Date {
         return startDate.addingTimeInterval(duration)
     }
-    var rating: Int? = 0
 }
-
-//struct Slot {
-//    let talk: Talk
-//    let speakers: [Speaker]
-//    let date: Date
-//    let duration: TimeInterval
-//    let room: String
-//}

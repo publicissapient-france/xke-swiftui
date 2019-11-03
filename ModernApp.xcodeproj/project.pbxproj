@@ -8,27 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		495917772365E26F0038B014 /* TalkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495917762365E26F0038B014 /* TalkDetail.swift */; };
-		496FB6642348B1D1003C05E2 /* TalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FB6632348B1D1003C05E2 /* TalkListView.swift */; };
-		496FB6662348B5CE003C05E2 /* TalkPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FB6652348B5CE003C05E2 /* TalkPreview.swift */; };
-		496FB66C2348DFC6003C05E2 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FB66B2348DFC6003C05E2 /* Time.swift */; };
-		496FB66E2348E167003C05E2 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FB66D2348E167003C05E2 /* Room.swift */; };
-		496FB6702348EAEA003C05E2 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FB66F2348EAEA003C05E2 /* Headline.swift */; };
 		49FB62092337D02100C5766E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB62082337D02100C5766E /* AppDelegate.swift */; };
 		49FB620B2337D02100C5766E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB620A2337D02100C5766E /* SceneDelegate.swift */; };
 		49FB620F2337D02400C5766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49FB620E2337D02400C5766E /* Assets.xcassets */; };
 		49FB62122337D02400C5766E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49FB62112337D02400C5766E /* Preview Assets.xcassets */; };
 		49FB62152337D02400C5766E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FB62132337D02400C5766E /* LaunchScreen.storyboard */; };
-		49FB621F2337D42600C5766E /* TalkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB621E2337D42600C5766E /* TalkRow.swift */; };
-		49FB62212337D4E700C5766E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB62202337D4E700C5766E /* Model.swift */; };
+		49FB62212337D4E700C5766E /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB62202337D4E700C5766E /* Talk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		495917762365E26F0038B014 /* TalkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetail.swift; sourceTree = "<group>"; };
-		496FB6632348B1D1003C05E2 /* TalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListView.swift; sourceTree = "<group>"; };
-		496FB6652348B5CE003C05E2 /* TalkPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPreview.swift; sourceTree = "<group>"; };
-		496FB66B2348DFC6003C05E2 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		496FB66D2348E167003C05E2 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		496FB66F2348EAEA003C05E2 /* Headline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
 		49FB62052337D02100C5766E /* ModernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FB62082337D02100C5766E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49FB620A2337D02100C5766E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +25,7 @@
 		49FB62112337D02400C5766E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49FB62142337D02400C5766E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49FB62162337D02400C5766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49FB621E2337D42600C5766E /* TalkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRow.swift; sourceTree = "<group>"; };
-		49FB62202337D4E700C5766E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		49FB62202337D4E700C5766E /* Talk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +60,12 @@
 			children = (
 				49FB62162337D02400C5766E /* Info.plist */,
 				49FB62082337D02100C5766E /* AppDelegate.swift */,
-				49FB62202337D4E700C5766E /* Model.swift */,
-				496FB66D2348E167003C05E2 /* Room.swift */,
+				49FB62202337D4E700C5766E /* Talk.swift */,
+				495917762365E26F0038B014 /* TalkDetail.swift */,
 				49FB620A2337D02100C5766E /* SceneDelegate.swift */,
-				496FB6632348B1D1003C05E2 /* TalkListView.swift */,
-				49FB621E2337D42600C5766E /* TalkRow.swift */,
-				496FB66F2348EAEA003C05E2 /* Headline.swift */,
-				496FB66B2348DFC6003C05E2 /* Time.swift */,
 				49FB620E2337D02400C5766E /* Assets.xcassets */,
 				49FB62132337D02400C5766E /* LaunchScreen.storyboard */,
 				49FB62102337D02400C5766E /* Preview Content */,
-				495917762365E26F0038B014 /* TalkDetail.swift */,
 			);
 			path = ModernApp;
 			sourceTree = "<group>";
@@ -90,7 +73,6 @@
 		49FB62102337D02400C5766E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				496FB6652348B5CE003C05E2 /* TalkPreview.swift */,
 				49FB62112337D02400C5766E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -167,16 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496FB6702348EAEA003C05E2 /* Headline.swift in Sources */,
 				49FB62092337D02100C5766E /* AppDelegate.swift in Sources */,
 				49FB620B2337D02100C5766E /* SceneDelegate.swift in Sources */,
-				496FB6662348B5CE003C05E2 /* TalkPreview.swift in Sources */,
-				496FB6642348B1D1003C05E2 /* TalkListView.swift in Sources */,
-				496FB66C2348DFC6003C05E2 /* Time.swift in Sources */,
 				495917772365E26F0038B014 /* TalkDetail.swift in Sources */,
-				496FB66E2348E167003C05E2 /* Room.swift in Sources */,
-				49FB62212337D4E700C5766E /* Model.swift in Sources */,
-				49FB621F2337D42600C5766E /* TalkRow.swift in Sources */,
+				49FB62212337D4E700C5766E /* Talk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

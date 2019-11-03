@@ -9,15 +9,17 @@
 import SwiftUI
 
 struct TalkDetail: View {
-    @Binding var talk: Talk
+    let talk: Talk
 
     var body: some View {
         VStack {
             HStack {
-                Time(startDate: talk.startDate,
-                     endDate: talk.endDate)
+                //Time(startDate: talk.startDate, endDate: talk.endDate)
                 Spacer()
-                Room(name: talk.room)
+                HStack(spacing: 2) {
+                    Image("picto-location")
+                    Text(talk.title)
+                }
             }
             .font(.caption)
 
@@ -26,46 +28,44 @@ struct TalkDetail: View {
             Text(talk.title.uppercased())
                 .headline()
 
-            HStack {
-                ForEach (0..<5) { i in
-                    Button(action: { self.talk.rating = i + 1 }) {
-                        return self.Notation(i, score: self.talk.rating ?? 0)
-                    }
-                }
-            }
+            Rating()
         }
         .padding()
     }
 
-    func Notation(_ index: Int, score notation: Int) -> some View {
+    private func Rating() -> some View {
+        HStack {
+            ForEach (0..<5) { i in
+                Button(action: { /* FIXME */ }) {
+                    return self.RatingItem(i)
+                }
+            }
+        }
+    }
+
+    private func RatingItem(_ index: Int) -> some View {
         let empty = "star"
         let noted = "star.fill"
+        let rating = 0 // FIXME
 
-        return Image(systemName: index < notation ? noted : empty)
+        return Image(systemName: index < rating ? noted : empty)
             .accentColor(Color("tint"))
     }
 }
 
-/// Pass a (writable) binding to underlying content
-struct BindingData<T, Content: View>: View {
-    @State private var data: T
-    let content: (Binding<T>) -> Content
+//struct TalkDetail_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        TalkDetail(TalkPreview.long)
+//    }
+//}
 
-    init(_ data: T, @ViewBuilder content: @escaping (Binding<T>) -> Content) {
-        self._data = State(initialValue: data)
-        self.content = content
-    }
 
-    var body: Content {
-        content($data)
-    }
-}
-
-struct TalkDetail_Previews: PreviewProvider {
-
-    static var previews: some View {
-        BindingData(TalkPreview.rexType) {
-            TalkDetail(talk: $0)
-        }
+private extension Text {
+    func headline() -> Self {
+        self
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .foregroundColor(Color("tint"))
     }
 }
