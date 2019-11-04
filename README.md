@@ -35,13 +35,13 @@ Vous remarquez que `TalkRow` implémente le protocole `View`. C'est le type "pri
 > Pour combiner plusieurs view, nous allons utiliser 3 stacks: HStack, VStack.
 
 
-## QUIZZ
+### QUIZZ
 
 1. Quand vous créez une `View`, où déclarez-vous le layout ?
 2. Combien de root view `body` peut-il contenir ?
-3. Comment fait-on pour passer des données à une `View` custom ?
+3. Comment passe-t-on des données à une `View` ?
 
-# Exercice 2 - Composition
+## Exercice 2 - Composition
   > Vous allez découvrir comment composer vos propres `View`.
 
 Le code de notre `View` commence à devenir gros et difficilement lisible. Il est de temps de séparer quelque peu les choses.
@@ -59,7 +59,7 @@ static private var formatter = { () -> DateFormatter in
 }()
 ```
 
-# Exercice 3 - Modifiers
+## Exercice 3 - Modifiers
   > Cet exercice a pour but de vous découvrir comment "transformer" une vue
 
 SwiftUI vient avec plusieurs modifiers pré-définis :
@@ -80,8 +80,11 @@ Vous devriez arriver au résultat suivant :
 <img src="ImagesREADME/multiPreview.png" width="640"/>
 &nbsp;
 
+### QUIZZ
+1. Quel type renvoie un `Modifier` ?
+1. (Bonus) Comment crée-t-on son propre `Modifier` ?
 
-# Exercice 4 - Faisons des listes !
+## Exercice 4 - Faisons des listes !
   > Le but de l'exercice est d'être capable d'afficher une liste d'éléments avec SwiftUI.
 
 1. Créez une nouvelle `View` appelée `TalkRowList`
@@ -94,8 +97,10 @@ Ca marche, mais nous devons écrire du contenu en dur dans chacune de nos `Views
 5. Créez un fichier `TalkPreview` dans `Preview Content`. Définissez-y un `TalkPreview` avec votre talk long et court.
 2. Utilisez-les dans `TalkRow` et `TalkRowList`.
 
+### QUIZZ
+1. Comment itère-t-on sur une liste d'éléments ?
 
-# Exercice 5 - Navigation
+## Exercice 5 - Navigation
   > Le but de l'exercice est d'utiliser la navigation pour afficher une nouvelle vue.
 
 Dans SwiftUI, la navigation se fait grâce à deux classes :
@@ -109,7 +114,7 @@ Dans SwiftUI, la navigation se fait grâce à deux classes :
 
   <img src="ImagesREADME/livePreview.png"/>
 
-# Exercice 6 - Stateful
+## Exercice 6 - Stateful
   > Le but de l'exercice est de découvrir comment gérer un état avec SwiftUI
 
 Maintenant que nous pouvons naviguer, nous allons ajouter la possibilité de noter un talk.
@@ -136,10 +141,7 @@ Il nous faut modifier `talk` directment afin de gader sa notation à jour.
 * un `Talk` (pour `TalkRow`)
 * un `Binding<Talk>` (pour `TalkDetail`)
 
-# Where to Go From Here? { WIP }
-
-Nous avons appris les bases de SwiftUI mais il y a encore quelques conceptes qu'on a pas abordé est qui peuvent rendre notre code encore plus lisible.
-Ce le cas de `ViewModifier` qui nous permettre de extraire des comportements d'une `View` même avec un `State`.
-Voici un très bon article où ce concepte est très bien mis en avant : https://sarunw.com/posts/swiftui-viewmodifier/
-
-Et pour aller plus loin il faut forcement faire une visite au repos de MoviewSwiftUI [https://github.com/Dimillian/MovieSwiftUI]
+### QUIZZ
+1. Qu'est-ce qu'un *Property Wrapper* ?
+1. A quel moment est-il résolu (compilation ou runtime) ?
+1. Quelle est la différence entre `tate` et `Binding` ?
